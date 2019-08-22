@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.dependency.syncWithFolderExplorer": false
+}

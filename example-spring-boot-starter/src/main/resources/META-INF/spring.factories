@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+example.external.dependency.examplespringbootstarter.BookConfiguration
