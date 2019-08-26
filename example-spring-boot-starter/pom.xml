@@ -5,7 +5,7 @@
 	
 	<groupId>example.external.dependency</groupId>
 	<artifactId>example-spring-boot-starter</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>example-spring-boot-starter</name>
 	<description>Demo project for Spring Boot</description>
 

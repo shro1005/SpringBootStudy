@@ -47,6 +47,6 @@ public class MyBook {
     }
     @Override
     public String toString() {
-        return "Kyun's Book {name : " + name + "page : " + page + "writer : " + writer + "}";
+        return "Kyun's Book {name : " + name + " / page : " + page + " / writer : " + writer + "}";
     }
 }

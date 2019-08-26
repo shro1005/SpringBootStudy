@@ -15,12 +15,14 @@ import example.external.dependency.examplespringbootstarter.MyBook;
 public class BookRunner implements ApplicationRunner {
 
     @Autowired
-    MyBook myBook;    // 다른 프로젝트의 MyBook 객체를 호출
+    MyBook myBook;   // 다른 프로젝트의 MyBook 객체를 호출
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(myBook.toString());
-	}
+    }
+    
+    
 
     
 }

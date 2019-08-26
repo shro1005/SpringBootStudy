@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+
+import example.external.dependency.examplespringbootstarter.MyBook;
 /**
  *   Application 	 2019.08.22. Spring 자동설정의 이해
  */
@@ -22,4 +24,12 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
+	@Bean
+	public MyBook myBook() {
+		MyBook myBook = new MyBook();
+		myBook.setName("name");
+		myBook.setPage(1);
+		myBook.setWriter("writer");
+		return myBook;
+	}
 }
