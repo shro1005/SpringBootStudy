@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "kyun",
+      "type": "study.springboot.step1.TypeSafetyProperties",
+      "sourceType": "study.springboot.step1.TypeSafetyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "kyun.age",
+      "type": "java.lang.Integer",
+      "sourceType": "study.springboot.step1.TypeSafetyProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "kyun.fullname",
+      "type": "java.lang.String",
+      "sourceType": "study.springboot.step1.TypeSafetyProperties"
+    },
+    {
+      "name": "kyun.name",
+      "type": "java.lang.String",
+      "sourceType": "study.springboot.step1.TypeSafetyProperties"
+    }
+  ],
+  "hints": []
+}
