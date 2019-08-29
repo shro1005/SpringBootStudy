@@ -51,6 +51,11 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>     <!--2019.08.29. json to xml view resolver를 사용하기 위해 의존성 추가-->
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>2.9.6</version>
+		</dependency>
 	</dependencies>
 
 	<build>
