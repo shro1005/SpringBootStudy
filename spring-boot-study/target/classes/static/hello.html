@@ -5,7 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<!--2019.08.29 정정 리소스 매핑-->
+<!--2019.08.29 정정 리소스 매-->
 Hello Static Resource
+
+<!--<script src="webjars/jquery/3.3.1/dist/jquery.min.js"></script>-->
+<script src="webjars/jquery/dist/jquery.min.js"></script>    <!-- webjars locator core 의존성을 추가하여 버전을 변경하지 않아도 사용할 수 있다.-->
+<script>
+    $(function(){
+        alert("use Webjars (jQuery)");
+    })
+</script>
 </body>
 </html>

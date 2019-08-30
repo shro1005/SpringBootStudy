@@ -26,6 +26,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *           -   spring.mvc.static-path-pattern: 맵핑 설정 변경 가능   ex) spring.mvc.static-path-pattern=/static/**
  *           -   spring.mvc.static-locations: 리소스 찾을 위치 변경 가능  --> 기본 리소스 위치를 전부 날리기 때문에 사용하지 않는것이 좋음.
  *           -   WebMvcConfigurer의 addRersourceHandlers로 커스터마이징 할 수 있음   (WebConfig.class 참고)
+ *==============================================================================================================================
+ *      4. Webjar : jQuery이나 Bootstrap 같은 클라이언트 사이트의 라이브러리를 jar로 하여, Java 라이브러리와 같은 요령으로 Maven과 Gradle에 따라 관리 할 수 있도록 한 서비스.
+ *                  (react.js 등등)
+ *          Maven 사용시 Maven Repository 웹 페이지에서 의존성 복사하여 pom.xml에 추가하면 된다.
+ *          이후 사용 경로는 /webjar/** 를 사용하면된다.
+ *
+ *          webjar들을 버전수정시 소스 변경을 안하기 위해선 WebJars Locator Core 의존성을 받으면 된다.
+ *
+ *
  */
 
 @SpringBootApplication

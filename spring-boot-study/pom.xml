@@ -56,6 +56,32 @@
 			<artifactId>jackson-dataformat-xml</artifactId>
 			<version>2.9.6</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars.bower/jquery -->
+		<dependency>
+			<groupId>org.webjars.bower</groupId>   <!--2019.08.29. webjar 사용을 위한 jQuery 의존성 추가-->
+			<artifactId>jquery</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars/webjars-locator-core -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator-core</artifactId>   <!--2019.08.29. webjar 버전 독립성을 위한 의존성 추가-->
+			<version>0.35</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>      <!-- 2019.08.30. 동적 템플릿 엔진(thymelef) 사용을 위한 의존성 추가 -->
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>    	 <!-- 2019.08.30. HTMLUnit 사용을 위한 의존성 추가-->
+			<artifactId>htmlunit-driver</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.htmlunit</groupId>		 <!-- 2019.08.30. HTMLUnit 사용을 위한 의존성 추가-->
+			<artifactId>htmlunit</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
