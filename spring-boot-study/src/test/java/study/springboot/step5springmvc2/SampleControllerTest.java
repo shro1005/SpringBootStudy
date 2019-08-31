@@ -31,7 +31,7 @@ public class SampleControllerTest {
 
     @Test
     public void hello() throws Exception {
-        mockMvc.perform(get("/thymelefHi"))      /** 요청 : /hello2 */
+        mockMvc.perform(get("/thymelefHi"))      /** 요청 : /thymelefHi */
                 .andExpect(status().isOk())
                 .andDo(print())
                 .andExpect(view().name("thymelefHi"))

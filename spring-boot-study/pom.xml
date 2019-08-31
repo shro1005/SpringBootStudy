@@ -51,11 +51,11 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>     <!--2019.08.29. json to xml view resolver를 사용하기 위해 의존성 추가-->
-			<artifactId>jackson-dataformat-xml</artifactId>
-			<version>2.9.6</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.fasterxml.jackson.dataformat</groupId>     &lt;!&ndash;2019.08.29. json to xml view resolver를 사용하기 위해 의존성 추가&ndash;&gt;-->
+<!--			<artifactId>jackson-dataformat-xml</artifactId>-->
+<!--			<version>2.9.6</version>-->
+<!--		</dependency>-->
 		<!-- https://mvnrepository.com/artifact/org.webjars.bower/jquery -->
 		<dependency>
 			<groupId>org.webjars.bower</groupId>   <!--2019.08.29. webjar 사용을 위한 jQuery 의존성 추가-->
@@ -81,6 +81,15 @@
 			<groupId>net.sourceforge.htmlunit</groupId>		 <!-- 2019.08.30. HTMLUnit 사용을 위한 의존성 추가-->
 			<artifactId>htmlunit</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>		 <!-- 2019.08.31. Spring HATEOAS 사용을 위한 의존성 추가-->
+			<version>2.9.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
 	</dependencies>
 

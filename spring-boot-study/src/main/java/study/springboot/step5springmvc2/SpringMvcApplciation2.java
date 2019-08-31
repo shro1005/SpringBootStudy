@@ -2,6 +2,7 @@ package study.springboot.step5springmvc2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import study.springboot.step4springmvc.SpringMvcApplication1;
 
 /**
  *  SpringMvcApplication    2019.08.30  Spring Boot를 사용한 Spring MVC 어플리케이션 활용
@@ -30,12 +31,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *              <artifactId>htmlunit</artifactId>
  *               <scope>test</scope>
  *          </dependency>
+ *
+ * ==============================================================================================================================
+ *        7.ExceptionHandler : 에러 발생시 handling하는 역할
+ *                              스프링부트는 기본적으로 ExceptionHandler를 제공한다.
+ *
+ * ==============================================================================================================================
+ *        8. Spring HATEOAS :  HATEOAS를 구현하기 위한 편의성을 제공하는 라이브러리
+ *           HATEOAS란 ? : rest api를 만들때  서버는 리소스에 대한 정보를 제공할 때 리소스에 연관된 링크 정보도 같이 제공을 해주고
+ *                                         클라이언트는 연관된 링크 정보를 바탕으로 리소스에 접근하는 방법이다.
  */
 
 @SpringBootApplication
-public class SpringMvcApplciation {
+public class SpringMvcApplciation2 {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringMvcApplciation.class);
+        SpringApplication.run(SpringMvcApplciation2.class);
     }
 }

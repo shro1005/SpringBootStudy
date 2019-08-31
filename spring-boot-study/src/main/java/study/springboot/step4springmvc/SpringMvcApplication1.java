@@ -38,9 +38,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-public class DemoSpringMvcApplication {
+public class SpringMvcApplication1 {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoSpringMvcApplication.class, args);
+        SpringApplication.run(SpringMvcApplication1.class, args);
     }
 }
