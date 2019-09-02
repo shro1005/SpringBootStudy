@@ -16,13 +16,16 @@ public class SampleController {
         return "thymelefHi";
     }
 
-    @GetMapping("/exception")    /** 2019.08.30 ExceptionHandler 학습*/
+    @GetMapping("/exception")
+    /** 2019.08.30 ExceptionHandler 학습*/
     public String exception() {
         throw new SampleException();
     }
 
-    @ExceptionHandler(SampleException.class)  /** 2019.08.30 ExceptionHandler 학습*/
-    public @ResponseBody AppError handle(SampleException e) {
+    @ExceptionHandler(SampleException.class)
+    /** 2019.08.30 ExceptionHandler 학습*/
+    public @ResponseBody
+    AppError handle(SampleException e) {
         AppError appError = new AppError();
         appError.setMessage("error.app.test");
         appError.setReason("just test :D");

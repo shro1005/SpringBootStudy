@@ -20,17 +20,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 /**
- *      SampleControllerTest        2019.08.27  Test 학습 (Mock, TestRestTemplate, WebTestClient 헉습)
+ * SampleControllerTest        2019.08.27  Test 학습 (Mock, TestRestTemplate, WebTestClient 헉습)
  */
-@RunWith(SpringRunner.class)      /** 가장 기본적인 형태의 Sptring Boot Test 형식*/
+@RunWith(SpringRunner.class)
+/** 가장 기본적인 형태의 Sptring Boot Test 형식*/
 /** 1. Mock 사용해서 내장톰캣 띄우지 않고 테스트하는 방법 */
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)   /** 기본적으로 Mock으로 테스트하는 것이 가장 빠르고 쉬움 */
-                                                                       /**  Mock : Servlet Container(톰캣 등)를 띄우지 않고
-                                                                        *          mock up을 해서 디스패처 서블릿에 요청을 보내는 테스트를 진행할 수 있다.
-                                                                        *          즉, 내장 톰캣을 사용하지 않고 요청을 주고 받는 것을 테스트 해볼 수 있다.
-                                                                        */
+/**  Mock : Servlet Container(톰캣 등)를 띄우지 않고
+ *          mock up을 해서 디스패처 서블릿에 요청을 보내는 테스트를 진행할 수 있다.
+ *          즉, 내장 톰캣을 사용하지 않고 요청을 주고 받는 것을 테스트 해볼 수 있다.
+ */
 /** 2. 내장톰캣을 띄워서 테스트 하는 방법 */
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)  /** 내장 톰캣을 랜덤포트로 띄워서 테스트 할 수 있다. */
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+/** 내장 톰캣을 랜덤포트로 띄워서 테스트 할 수 있다. */
 @AutoConfigureMockMvc
 public class SampleControllerTest {
 
@@ -38,12 +40,14 @@ public class SampleControllerTest {
 //    MockMvc mockMvc;   /** Mock사용시 */
 //    TestRestTemplate testRestTemplate;  /** 내장 톰캣 사용시, test용 RestTemplate이다.
 //                                            testRestTemplate은 synchronous : 요청하나 보내고 끝날때 까지 기다린 다음 요청을 보낼 수 있다. */
-    WebTestClient webTestClient;   /** asynchronous 하기 때문에 많이 사용!!!! */
+            WebTestClient webTestClient;   /** asynchronous 하기 때문에 많이 사용!!!! */
 
 
-    /** 2.1 Servlet단 까지만 테스트하고 싶을 때 -> 테스트가 서비스까지 즉, 무거운 테스트를 피하기 위함*/
+    /**
+     * 2.1 Servlet단 까지만 테스트하고 싶을 때 -> 테스트가 서비스까지 즉, 무거운 테스트를 피하기 위함
+     */
     @MockBean  // Service를 MockBean으로 대체하면 테스트할때 Mock Bean의 서비스가 적용된다.
-    SampleService mockSampleService;
+            SampleService mockSampleService;
 
     @Test
     public void hello() throws Exception {
@@ -54,15 +58,15 @@ public class SampleControllerTest {
 //                .andDo(print());                    /** 요청왔던 것을 출력 */
 
         /** 2. 내장 톰캣 사용시 */
-           /** 2.1 Service를 Mock Bean 으로 대체 시*/
-            when(mockSampleService.getName()).thenReturn("Adwin");
-            /** TestRestTemplate 사용*/
+        /** 2.1 Service를 Mock Bean 으로 대체 시*/
+        when(mockSampleService.getName()).thenReturn("Adwin");
+        /** TestRestTemplate 사용*/
 //        String result = testRestTemplate.getForObject("/hello", String.class);  /** url과 원하는 body type을 적어주면 결과값을 받을 수 있다.*/
 //        assertThat(result).isEqualTo("hello kyun");    // 내장 톰켓만 사용했을 경우
 //        assertThat(result).isEqualTo("hello Adwin");    // Mock Bean 사용시
-            /** WebTestClient 사용*/
-            webTestClient.get().uri("/hello").exchange().expectStatus().isOk()
-                    .expectBody(String.class).isEqualTo("hello Adwin");
+        /** WebTestClient 사용*/
+        webTestClient.get().uri("/hello").exchange().expectStatus().isOk()
+                .expectBody(String.class).isEqualTo("hello Adwin");
 
     }
 }

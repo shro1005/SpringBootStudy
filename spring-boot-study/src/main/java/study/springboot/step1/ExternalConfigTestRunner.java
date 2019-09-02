@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import javax.validation.Valid;
 
 /**
- *      ExternalConfigTestRunner    2019.08.26 외부 설정 학습 (application.properties에 설정한 값들 불러 오기 및 외부설정 우선순위 학습)
- *                                  우선 순의의 경우 문서 참고
+ * ExternalConfigTestRunner    2019.08.26 외부 설정 학습 (application.properties에 설정한 값들 불러 오기 및 외부설정 우선순위 학습)
+ * 우선 순의의 경우 문서 참고
  */
 @Component
 public class ExternalConfigTestRunner implements ApplicationRunner {
@@ -22,7 +22,7 @@ public class ExternalConfigTestRunner implements ApplicationRunner {
 //    private  int age;
 
     @Autowired     /** 2019.08.27 외부 설정 (@ConfigurationProperties를 사용한 타입 세이프티한 프로퍼티 활용) */
-    TypeSafetyProperties typeSafetyProperties;
+            TypeSafetyProperties typeSafetyProperties;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {

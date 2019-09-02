@@ -4,7 +4,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Component;
 
 /**
- *  ArgumentTest   2019.08.26  Application 아큐먼트 받는 방법 학습
+ * ArgumentTest   2019.08.26  Application 아큐먼트 받는 방법 학습
  */
 @Component
 public class ArgumentTest {

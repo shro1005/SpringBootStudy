@@ -27,7 +27,11 @@ public class SampleControllerTest {
     MockMvc mockMvc;
 
     @Autowired
-    WebClient webClient;   /** 2019.08.30 htmlUnit 활용할때는 WebClient를 사용한다.*/
+    WebClient webClient;
+
+    /**
+     * 2019.08.30 htmlUnit 활용할때는 WebClient를 사용한다.
+     */
 
     @Test
     public void hello() throws Exception {

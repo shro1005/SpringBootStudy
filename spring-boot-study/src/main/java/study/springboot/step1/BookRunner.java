@@ -21,8 +21,6 @@ public class BookRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(myBook.toString());
     }
-    
-    
 
-    
+
 }

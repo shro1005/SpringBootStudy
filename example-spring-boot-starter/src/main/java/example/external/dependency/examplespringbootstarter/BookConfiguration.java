@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * BookConfiguration    2019.08.22 Spring Boot 자동설정 학습 
+ * BookConfiguration    2019.08.22 Spring Boot 자동설정 학습
  */
 @Configuration
 public class BookConfiguration {
@@ -19,5 +19,5 @@ public class BookConfiguration {
         myBook.setWriter("kyun");
         return myBook;
     }
-    
+
 }

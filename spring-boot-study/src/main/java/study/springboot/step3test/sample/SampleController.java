@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *  SampleController    2019.08.27 Test 학습을 위한 Controller
+ * SampleController    2019.08.27 Test 학습을 위한 Controller
  */
 @RestController
 public class SampleController {

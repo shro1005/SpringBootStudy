@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- *  ForTestApplication      2019.08.27 Test 학습
+ * ForTestApplication      2019.08.27 Test 학습
  */
 @SpringBootApplication
 public class ForTestApplication {

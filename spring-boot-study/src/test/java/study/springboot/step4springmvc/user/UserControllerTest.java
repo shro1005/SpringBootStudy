@@ -35,9 +35,9 @@ public class UserControllerTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8)   /** content : 요청 JSON*/
                 .accept(MediaType.APPLICATION_JSON_UTF8)        /** accept  : 응답 JSON*/
                 .content(userJSON))             /** 여기까지는 요청 만드는 법*/
-            .andExpect(status().isOk())         /** 여기서부터 검증*/
-            .andExpect(jsonPath("$.username", is(equalTo("kyun"))))
-            .andExpect(jsonPath("$.password", is(equalTo("1234"))));
+                .andExpect(status().isOk())         /** 여기서부터 검증*/
+                .andExpect(jsonPath("$.username", is(equalTo("kyun"))))
+                .andExpect(jsonPath("$.password", is(equalTo("1234"))));
     }
 
     @Test
