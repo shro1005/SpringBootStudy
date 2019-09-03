@@ -30,8 +30,16 @@
 
 		<dependency>
 			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<artifactId>h2</artifactId>							<!-- 2019.09.01 h2 연동을 위한 의존성 추가-->
 			<scope>runtime</scope>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>mysql</groupId>-->
+<!--			<artifactId>mysql-connector-java</artifactId>		&lt;!&ndash; 2019.09.01 MySQL 연동을 위한 의존성 추가&ndash;&gt;-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>org.postgresql</groupId>					<!-- 2019.09.01 Postgresql 연동을 위한 의존성 추가-->
+			<artifactId>postgresql</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
