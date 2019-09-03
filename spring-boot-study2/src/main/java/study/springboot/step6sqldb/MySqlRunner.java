@@ -5,9 +5,12 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import study.springboot.step6sqldb.account.Account;
+import study.springboot.step6sqldb.account.AccountRepository;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
@@ -19,22 +22,38 @@ public class MySqlRunner/*H2Runner*/ implements ApplicationRunner {
     DataSource dataSource;   /** 기본적인 jdbc사용 하는 법*/
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    JdbcTemplate jdbcTemplate;  /** datasource 보다 훨씬 간편하고 안전하게 db와 커넥션을 맺고 쿼리를 날릴수 있다.*/
+
+    @Autowired  /**2019.09.03 JPA 적용*/
+    AccountRepository accountRepository;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         try (Connection conn = dataSource.getConnection()){    /**  이부분은 어떤 SQL을 사용하던 비슷하다. Connection, Statement 사용하는 것들 */
             String url = conn.getMetaData().getURL();
             String username = conn.getMetaData().getUserName();
-
+            System.out.println("MySqlRunner -> driverName : "+conn.getMetaData().getDriverName());
             System.out.println("MySqlRunner -> url : " + url + " / username : " + username);
 
 //            Statement stmt = conn.createStatement();
 //            String query = "CREATE TABLE ACCOUNT (ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
 //            stmt.executeUpdate(query);
+            /** 2019.09.03 JPA를 사용 (JpaRepository )*/
+            String name = "Adwin";
+            Account example = new Account();
+//            example.setId(1);
+            example.setUsername(name);
+            example.setPassword("pass123");
+            accountRepository.save(example);
+
+            Account account = accountRepository.selectByUsername(name);
+            System.out.println("JPA Test Runner : select is work (username : " + account.getUsername() + " / password : " + account.getPassword() + ")");
+
         }
 
-        String q2 = "INSERT INTO ACCOUNT VALUES (1, 'kyun')";
-        jdbcTemplate.execute(q2);
+//        String q2 = "INSERT INTO ACCOUNT VALUES (1, 'kyun')";
+//        jdbcTemplate.execute(q2);
+
+
     }
 }

@@ -28,18 +28,27 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>com.h2database</groupId>-->
+<!--			<artifactId>h2</artifactId>							&lt;!&ndash; 2019.09.01 h2 연동을 위한 의존성 추가&ndash;&gt;-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>							<!-- 2019.09.01 h2 연동을 위한 의존성 추가-->
-			<scope>runtime</scope>
+			<artifactId>h2</artifactId>							<!-- 2019.09.03 data test를 위한 test 스코프에 h2 의존성 추가-->
+			<scope>test</scope>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>mysql</groupId>-->
-<!--			<artifactId>mysql-connector-java</artifactId>		&lt;!&ndash; 2019.09.01 MySQL 연동을 위한 의존성 추가&ndash;&gt;-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>		<!-- 2019.09.01 MySQL 연동을 위한 의존성 추가-->
+		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>					<!-- 2019.09.01 Postgresql 연동을 위한 의존성 추가-->
 			<artifactId>postgresql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>			<!-- 2019.09.03 스프링 데이터 JPA 적용을 위한 의존성 추가 -->
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
