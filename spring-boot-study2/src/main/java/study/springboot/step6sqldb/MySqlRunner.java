@@ -36,17 +36,18 @@ public class MySqlRunner/*H2Runner*/ implements ApplicationRunner {
             System.out.println("MySqlRunner -> url : " + url + " / username : " + username);
 
 //            Statement stmt = conn.createStatement();
-//            String query = "CREATE TABLE ACCOUNT (ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
+//            String query = "CREATE TABLE ACCOUNT (ID INTEGER NOT NULL, username VARCHAR(255), password VARCHAR(255) , PRIMARY KEY (id))";
 //            stmt.executeUpdate(query);
             /** 2019.09.03 JPA를 사용 (JpaRepository )*/
-            String name = "Adwin";
-            Account example = new Account();
-//            example.setId(1);
-            example.setUsername(name);
-            example.setPassword("pass123");
-            accountRepository.save(example);
+//            String name = "Adwin";
+//            Account example = new Account();
+////            example.setId(1);
+//            example.setUsername(name);
+//            example.setPassword("pass");
+//            example.setActive(true);  /** 2019.09.05 데이터베이스 마이그레이션 테스트를 위한 신규 칼럼 추가 및 데이터 추가*/
+//            accountRepository.save(example);
 
-            Account account = accountRepository.selectByUsername(name);
+            Account account = accountRepository.selectByUsername("Adwin");
             System.out.println("JPA Test Runner : select is work (username : " + account.getUsername() + " / password : " + account.getPassword() + ")");
 
         }

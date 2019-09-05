@@ -23,9 +23,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *	       - JPA : 이런 ORM 을 위한 자바 표준
  *	       - 스프링 데이터 JPA : 위의 JPA를 사용하기 아주 쉽게 구현해놓은 구현체이다. (Repository  자동 구현, 쿼리 메소드 자동 구현 등 )
  *	         동작 방법 : SDJ -> JPA -> Hibernate -> Datasource 이므로 위에서 사용한 datasource의 기능 뿐 아니라 hibernate, jpa, sdj 기능까지 모두 사용가능!
+ *
+ *	    5. DB 마이그레이션 (Flyway, Liquibase)
+ *	       -  DB 스키마 변경 or 데이터 변경을 버전 관리하듯이 sql 파일로 관리할 수 있음.
  */
 @SpringBootApplication
-public class SpringBootStudy2Application {
+	public class SpringBootStudy2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootStudy2Application.class, args);

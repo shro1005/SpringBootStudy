@@ -18,6 +18,8 @@ public class Account {
 
     private String password;
 
+    private Boolean active;   /** 2019.09.05 데이터베이스 마이그레이션 테스트를 위한 신규 칼럼 추가 및 데이터 추가*/
+
     public Long getId() {
         return id;
     }
@@ -55,5 +57,13 @@ public class Account {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 }
