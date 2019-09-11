@@ -1,4 +1,4 @@
-package study.springboot.step6sqldb;
+package study.springboot.step9restclient;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringBootStudy2ApplicationTests {
+public class SpringBootStudy4ApplicationTests {
 
     @Test
     public void contextLoads() {

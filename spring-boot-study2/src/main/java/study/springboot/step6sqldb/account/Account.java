@@ -4,21 +4,26 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- *  2019.09.03  Spirng Data JPA 학습을 위한 Entity 추가
+ * 2019.09.03  Spirng Data JPA 학습을 위한 Entity 추가
  */
 @Entity
-@Table(name ="account")
+@Table(name = "account")
 public class Account {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)  /** 값 자동 부여*/
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    /** 값 자동 부여*/
     private Long id;
 
     private String username;
 
     private String password;
 
-    private Boolean active;   /** 2019.09.05 데이터베이스 마이그레이션 테스트를 위한 신규 칼럼 추가 및 데이터 추가*/
+    private Boolean active;
+
+    /**
+     * 2019.09.05 데이터베이스 마이그레이션 테스트를 위한 신규 칼럼 추가 및 데이터 추가
+     */
 
     public Long getId() {
         return id;

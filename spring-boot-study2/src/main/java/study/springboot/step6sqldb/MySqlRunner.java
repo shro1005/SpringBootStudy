@@ -14,25 +14,31 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- *  2019.09.01  Spirng Boot를 활용한 db 연동
+ * 2019.09.01  Spirng Boot를 활용한 db 연동
  */
 @Component
 public class MySqlRunner/*H2Runner*/ implements ApplicationRunner {
     @Autowired
-    DataSource dataSource;   /** 기본적인 jdbc사용 하는 법*/
+    DataSource dataSource;
+    /**
+     * 기본적인 jdbc사용 하는 법
+     */
 
     @Autowired
-    JdbcTemplate jdbcTemplate;  /** datasource 보다 훨씬 간편하고 안전하게 db와 커넥션을 맺고 쿼리를 날릴수 있다.*/
+    JdbcTemplate jdbcTemplate;
+    /**
+     * datasource 보다 훨씬 간편하고 안전하게 db와 커넥션을 맺고 쿼리를 날릴수 있다.
+     */
 
     @Autowired  /**2019.09.03 JPA 적용*/
-    AccountRepository accountRepository;
+            AccountRepository accountRepository;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        try (Connection conn = dataSource.getConnection()){    /**  이부분은 어떤 SQL을 사용하던 비슷하다. Connection, Statement 사용하는 것들 */
+        try (Connection conn = dataSource.getConnection()) {    /**  이부분은 어떤 SQL을 사용하던 비슷하다. Connection, Statement 사용하는 것들 */
             String url = conn.getMetaData().getURL();
             String username = conn.getMetaData().getUserName();
-            System.out.println("MySqlRunner -> driverName : "+conn.getMetaData().getDriverName());
+            System.out.println("MySqlRunner -> driverName : " + conn.getMetaData().getDriverName());
             System.out.println("MySqlRunner -> url : " + url + " / username : " + username);
 
 //            Statement stmt = conn.createStatement();

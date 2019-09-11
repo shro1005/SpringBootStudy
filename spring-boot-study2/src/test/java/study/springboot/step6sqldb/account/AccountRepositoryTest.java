@@ -18,7 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 @RunWith(SpringRunner.class)
-@DataJpaTest   // DataJpaTest : slicing test -> Repository 에 관련된 빈만 데스트 , 임베디드 데이터베이스가 필요하다, 즉 태스트 스코프에 데이터베이스 의존성을 추가해야한다.
+@DataJpaTest
+// DataJpaTest : slicing test -> Repository 에 관련된 빈만 데스트 , 임베디드 데이터베이스가 필요하다, 즉 태스트 스코프에 데이터베이스 의존성을 추가해야한다.
 public class AccountRepositoryTest {
 
     @Autowired
@@ -32,7 +33,7 @@ public class AccountRepositoryTest {
 
     @Test
     public void dataTest() throws SQLException {
-        try(Connection connection = dataSource.getConnection()) {
+        try (Connection connection = dataSource.getConnection()) {
             DatabaseMetaData metaData = connection.getMetaData();
             System.out.println(metaData.getURL());
             System.out.println(metaData.getDriverName());

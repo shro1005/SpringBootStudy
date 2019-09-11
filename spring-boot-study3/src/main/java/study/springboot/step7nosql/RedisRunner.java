@@ -14,7 +14,10 @@ import java.util.Optional;
 @Component
 public class RedisRunner implements ApplicationRunner {
     @Autowired
-    StringRedisTemplate redisTemplate;  /** 2019.09.05 */
+    StringRedisTemplate redisTemplate;
+    /**
+     * 2019.09.05
+     */
 
     @Autowired
     AccountRepository accountRepository;
@@ -33,7 +36,7 @@ public class RedisRunner implements ApplicationRunner {
         accountRepository.save(account);
 
         Optional<Account> insertedAccount = accountRepository.findById(account.getId());
-        System.out.println("Redis Runner --> username : "+insertedAccount.get().getUsername());
-        System.out.println("Redis Runner --> email : "+insertedAccount.get().getEmail());
+        System.out.println("Redis Runner --> username : " + insertedAccount.get().getUsername());
+        System.out.println("Redis Runner --> email : " + insertedAccount.get().getEmail());
     }
 }

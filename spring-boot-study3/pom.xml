@@ -35,10 +35,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>     <!-- 2019.09.05 Redis 의존성 추가-->
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-mongodb</artifactId>   &lt;!&ndash; 2019.09.05 Mongodb 의존성 추가&ndash;&gt;-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-data-mongodb</artifactId>   &lt;!&ndash; 2019.09.05 Mongodb 의존성 추가&ndash;&gt;-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>de.flapdoodle.embed</groupId>
             <artifactId>de.flapdoodle.embed.mongo</artifactId>          <!-- 2019.09.05 Mongodb test를 위한 의존성 추가-->
@@ -55,13 +55,23 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>       <!-- 2019.09.10 Spring boot Security를 위한 의존성 추가 -->
+            <artifactId>spring-boot-starter-security
+            </artifactId>       <!-- 2019.09.10 Spring boot Security를 위한 의존성 추가 -->
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>               <!-- 2019.09.10 Spring security test가 깨지지 않기 위한 의존성 추가 -->
+            <artifactId>spring-security-test
+            </artifactId>               <!-- 2019.09.10 Spring security test가 깨지지 않기 위한 의존성 추가 -->
             <version>${spring-security.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
         </dependency>
     </dependencies>
 
